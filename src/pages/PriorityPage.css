@@ -1,0 +1,31 @@
+
+.priority-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px; 
+  }
+  
+  .priority-section {
+    flex: 1;
+    min-width: 200px; 
+    border: 1px solid #ddd;
+    padding: 16px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .ticket {
+    margin-top: 8px;
+  }
+  
+.ticket {
+  border: 1px solid #ddd; 
+  padding: 10px;
+  margin: 10px;
+}
+
+.ticket strong {
+  color: #333; 
+}
+
+
