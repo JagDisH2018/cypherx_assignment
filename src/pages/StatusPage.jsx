@@ -1,5 +1,7 @@
 import React from "react";
 import "./StatusPage.css";
+import { PiPlusThin } from "react-icons/pi";
+import { PiDotsThreeLight } from "react-icons/pi";
 
 const StatusPage = ({ tickets }) => {
   const groupByStatus = () => {
@@ -17,23 +19,23 @@ const StatusPage = ({ tickets }) => {
     return (
       <div className="status-container">
         <div className="status-section">
-          <h3>Backlog</h3>
+          <span>Backlog</span><span className="extra-icon"><PiPlusThin/> <PiDotsThreeLight/></span>
           {renderTickets(groupedByStatus["Backlog"])}
         </div>
         <div className="status-section">
-          <h3>Todo</h3>
+          <span>Todo</span><span className="extra-icon"><PiPlusThin/> <PiDotsThreeLight/></span>
           {renderTickets(groupedByStatus["Todo"])}
         </div>
         <div className="status-section">
-          <h3>In Progress</h3>
+          <span>In Progress</span><span className="extra-icon"><PiPlusThin/> <PiDotsThreeLight/></span>
           {renderTickets(groupedByStatus["In progress"])}
         </div>
         <div className="status-section">
-          <h3>Done</h3>
+          <span>Done</span><span className="extra-icon"><PiPlusThin/> <PiDotsThreeLight/></span>
           {renderTickets(groupedByStatus["Done"])}
         </div>
         <div className="status-section">
-          <h3>Cancelled</h3>
+          <span>Cancelled</span><span className="extra-icon"><PiPlusThin/> <PiDotsThreeLight/></span>
           {renderTickets(groupedByStatus["Cancelled"])}
         </div>
       </div>

@@ -1,3 +1,16 @@
 .display{
     display: relative;
+    border: rgb(170, 170, 170);
+    border: px solid #ccc;
+    box-shadow: 2px 3px 5px  black;
+    padding: 5px;
+    width: fit-content;
+    height: 3vh;
+}
+.content-body{
+    padding: 5px;
+    height: 90vh;
+    margin-top: 1%;
+    background-color: #f4f5f8;
+    width: 100%;
 }

@@ -6,15 +6,19 @@
   }
   
   .status-section {
+
     flex: 1;
-    min-width: 200px; 
-    border: 1px solid #ddd;
-    padding: 16px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 25vw;
+    padding: 5px;
   }
   
   .ticket {
     margin-top: 8px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow:2px 2px 2px rgba(128, 128, 128, 0.158) ;
   }
-  
+  .extra-icon{
+    position: sticky;
+    left: 40%;
+  }

@@ -4,7 +4,6 @@
     left: 4%;
     transform: translate(-50%, -50%);
     background-color: white;
-    border: 1px solid #ccc;
     padding: 10px;
     z-index: 1000; /* Set z-index to a high value to make sure it's above other elements */
   }

@@ -4,6 +4,7 @@ import UserPage from './UserPage';
 import PriorityPage from './PriorityPage';
 import Display from '../components/display';
 import './MainPage.css';
+import { CiMenuBurger } from "react-icons/ci";
 
 function MainPage() {
   const [tickets, setTickets] = useState([]);
@@ -66,19 +67,20 @@ function MainPage() {
   }, [displayVisible]);
 
   return (
-    <div>
+    <>
       <div onClick={toggleDisplay} className="display">
-        Display
+       <span><CiMenuBurger/></span> Display
       </div>
+      
+      <div className='content-body'>
       {displayVisible && (
         <div ref={displayRef} className='appear-content'>
-          <Display onGroupByChange={handleGroupByChange} onOrderByChange={handleOrderByChange} />
+          <Display onGroupByChange={handleGroupByChange} onOrderByChange={handleOrderByChange} className="display-component"/>
         </div>
       )}
-      <div>
         {renderGroupedPage()}
       </div>
-    </div>
+    </>
   );
 }
 
