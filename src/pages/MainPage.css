@@ -2,10 +2,11 @@
     display: relative;
     border: rgb(170, 170, 170);
     border: px solid #ccc;
-    box-shadow: 2px 3px 5px  black;
+    box-shadow: 2px 3px 5px  rgba(92, 88, 88, 0.253);
     padding: 5px;
     width: fit-content;
     height: 3vh;
+    border-radius: 5px;
 }
 .content-body{
     padding: 5px;
@@ -13,4 +14,11 @@
     margin-top: 1%;
     background-color: #f4f5f8;
     width: 100%;
+}
+
+.background-change{
+    position: absolute;
+    right: 1%;
+    font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }

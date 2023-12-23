@@ -11,8 +11,64 @@
   
   
   .ticket {
-    margin-top: 8px;
+    padding-bottom  : 200px;
     background-color: white;
     border-radius: 8px;
     box-shadow:2px 2px 2px rgba(128, 128, 128, 0.158) ;
+  }
+  .u-name{
+    padding-top: 30px;
+    margin-top: 22px;
+    margin-left: 4px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #373737;
+    font-family: "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+  }
+  .r-name{
+    border-radius: 50%;
+
+    margin-left: 5%;
+    padding: 5px;
+    font-size: 6.5px;
+    color: white;
+  }
+  .ticket-count{
+    color: gray;
+    margin-left: 10px;
+  }
+  .user-ticket{
+    display: flex;
+    margin-top: 10px;
+  }
+  .user-ticket .ut-section1{
+    width: 10%;
+
+  }
+    .user-ticket .ut-section2{
+    width: 90%;
+  }
+  .pri-icon{
+    display: flex;
+  }
+  .pri-icon-section{
+    width: 10vw;
+  }
+  .pri-icon.section2{
+    width: 90vw;
+  }
+  .tag{
+    display: flex;
+    
+  }
+  .tagName{
+    margin-left: 9px;
+    border-radius: 5px;
+    padding: 2px;
+    border: 1px solid grey ;
+  }
+  .iconTower{
+    border: 1px solid grey;
+    border-radius: 5px;
+    padding: 2px;
   }
