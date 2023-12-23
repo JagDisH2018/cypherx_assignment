@@ -100,11 +100,9 @@ const UserPage = ({ tickets, users, theme }) => {
               </span>
               <span className="ut-section2">{ticket.title}</span>
               <br />
-
               <br />
             </div>
             <br />
-
             <div className="tag">
               <div className="iconTower">
                 {ticket.priority === 0 ? (

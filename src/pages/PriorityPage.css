@@ -9,7 +9,7 @@
     flex: 1;
   }
   
-  
+
   .ticket {
     margin-top: 8px;
     background-color: white;
@@ -27,3 +27,9 @@
 }
 
 
+.count{
+  margin-left: 5%;
+}
+.space{
+  margin-left: 70px;
+}

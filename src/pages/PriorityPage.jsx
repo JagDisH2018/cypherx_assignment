@@ -1,5 +1,7 @@
 import React from "react";
 import "./PriorityPage.css";
+import { PiPlusThin } from "react-icons/pi";
+import { PiDotsThreeLight } from "react-icons/pi";
 import {
   PiCellSignalMediumLight,
   PiCellSignalHighLight,
@@ -12,7 +14,7 @@ import { LiaCircleSolid } from "react-icons/lia";
 import { TbCircleDotted } from "react-icons/tb";
 import { GrInProgress } from "react-icons/gr";
 
-const PriorityPage = ({ tickets,user,theme }) => {
+const PriorityPage = ({ tickets, user, theme }) => {
   const groupByPriority = () => {
     return tickets.reduce((grouped, ticket) => {
       const priority = ticket.priority;
@@ -21,44 +23,67 @@ const PriorityPage = ({ tickets,user,theme }) => {
       return grouped;
     }, {});
   };
-  
-  /*const getTicketCountByUser = (userId) => {
-    const userTickets = groupByUser()[userId];
-    return userTickets ? userTickets.length : 0;
-  };
-  const groupByUser = () => {
-    return tickets.reduce((grouped, ticket) => {
-      const userId = ticket.userId;
-      grouped[userId] = grouped[userId] || [];
-      grouped[userId].push(ticket);
-      return grouped;
-    }, {});
-  };
-  */
 
   const renderPrioritySections = () => {
     const groupedByPriority = groupByPriority();
 
+    const countByPriority = {
+      0: 0,
+      1: 0,
+      2: 0,
+      3: 0,
+      4: 0,
+    };
+
+    // Count the number of tickets for each priority
+    Object.keys(countByPriority).forEach((priority) => {
+      if (groupedByPriority[priority]) {
+        countByPriority[priority] = groupedByPriority[priority].length;
+      }
+    });
+
     return (
       <div className={`priority-container ${theme}`}>
         <div className="priority-section">
-          <h3>No Priority</h3>
-          {renderTickets(groupedByPriority[0])}
+          <div className="plusDot">
+            <h3>
+              No Priority 
+              <span className="count">{countByPriority[0]}</span>
+              <PiPlusThin className="space"/> <PiDotsThreeLight />
+            </h3>
+            {renderTickets(groupedByPriority[0])}
+          </div>
         </div>
         <div className="priority-section">
-          <h3>Low</h3>
+          <h3>
+            Low 
+            <span className="count">{countByPriority[1]}</span>
+            <PiPlusThin className="space" /> <PiDotsThreeLight />
+          </h3>
           {renderTickets(groupedByPriority[1])}
         </div>
         <div className="priority-section">
-          <h3>Medium</h3>
+          <h3>
+            Medium 
+            <span className="count">{countByPriority[2]}</span>
+            <PiPlusThin className="space"/> <PiDotsThreeLight />
+          </h3>
           {renderTickets(groupedByPriority[2])}
         </div>
         <div className="priority-section">
-          <h3>High</h3>
+          <h3>
+            High 
+            <span className="count">{countByPriority[3]}</span>
+            <PiPlusThin className="space"/> <PiDotsThreeLight />
+          </h3>
           {renderTickets(groupedByPriority[3])}
         </div>
         <div className="priority-section">
-          <h3>Urgent</h3>
+          <h3>
+            Urgent 
+            <span className="count">{countByPriority[4]}</span>
+            <PiPlusThin className="space"/> <PiDotsThreeLight />
+          </h3>
           {renderTickets(groupedByPriority[4])}
         </div>
       </div>
@@ -72,18 +97,19 @@ const PriorityPage = ({ tickets,user,theme }) => {
             <strong></strong> {ticket.id}
             <br />
             <span className="ut-section1">
-                {ticket.status === "In progress" ? (
-                  <GrInProgress color="yellow" />
-                ) : ticket.status === "Todo" ? (
-                  <LiaCircleSolid />
-                ) : ticket.status === "Backlog" ? (
-                  <TbCircleDotted color="red" />
-                ) : (
-                  <div></div>
-                )}
-              </span> {ticket.title}
+              {ticket.status === "In progress" ? (
+                <GrInProgress color="yellow" />
+              ) : ticket.status === "Todo" ? (
+                <LiaCircleSolid />
+              ) : ticket.status === "Backlog" ? (
+                <TbCircleDotted color="red" />
+              ) : (
+                <div></div>
+              )}
+            </span>{" "}
+            {ticket.title}
             <br />
-            <br/>
+            <br />
             <div className="tag">
               <div className="iconTower">
                 {ticket.priority === 0 ? (
@@ -105,7 +131,6 @@ const PriorityPage = ({ tickets,user,theme }) => {
               </div>
             </div>
           </div>
-          
         ))
       : null;
   };
