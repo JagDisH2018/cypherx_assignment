@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/cypherx_assignment/static/css/main.9206122e.css",
+    "main.js": "/cypherx_assignment/static/js/main.feedfbd5.js",
+    "index.html": "/cypherx_assignment/index.html",
+    "main.9206122e.css.map": "/cypherx_assignment/static/css/main.9206122e.css.map",
+    "main.feedfbd5.js.map": "/cypherx_assignment/static/js/main.feedfbd5.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9206122e.css",
+    "static/js/main.feedfbd5.js"
+  ]
+}
